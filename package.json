@@ -42,13 +42,14 @@
         "babel-core": "^6.26.0",
         "babel-loader": "^7.1.2",
         "babel-preset-env": "^1.6.1",
+        "cordova-browser": "^5.0.3",
+        "font-awesome": "^4.7.0",
         "framework7": "^2.0.6",
-        "framework7-vue": "^2.0.0",
         "framework7-icons": "^0.9.0",
+        "framework7-vue": "^2.0.0",
         "loglevel": "^1.4.1",
         "vue": "^2.5.13",
-        "vuex": "^3.0.1",
-        "font-awesome": "^4.7.0"
+        "vuex": "^3.0.1"
     },
     "displayName": "F7Demo"
 }
