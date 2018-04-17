@@ -13,6 +13,7 @@
         <f7-block-title>Introduction</f7-block-title>
         <f7-block inner>
             <p>This is template for Framework7 v2, Vue and Phonegap.</p>
+            <p>deviceready: {{ deviceready }}</p>
             <p>userAgent: {{ userAgent }}</p>
             <p>appName: {{ appName }}</p>
             <p>appVersion: {{ appVersion }}</p>
@@ -61,7 +62,8 @@ export default {
             webSocketEnabled: false,
             audioEnabled: false,
             canvasEnabled: false,
-            geolocationEnabled: false
+            geolocationEnabled: false,
+            deviceready: ''
         }
     },
     mounted() {
@@ -72,6 +74,12 @@ export default {
         this.audioEnabled = typeof document.createElement('audio').play === 'function'
         this.canvasEnabled = typeof document.createElement('canvas').getContext === 'function'
         this.geolocationEnabled = typeof navigator.geolocation !== 'undefined'
+    },
+    methods: {
+        onF7Ready() {
+            this.webSocketEnabled = typeof WebSocket !== 'undefined'
+            this.deviceready = 'deviceready'
+        }
     }
 }
 </script>

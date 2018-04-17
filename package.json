@@ -45,6 +45,7 @@
     "babel-preset-env": "^1.6.1",
     "cordova-android": "^7.0.0",
     "cordova-browser": "^5.0.3",
+    "cordova-plugin-websocket": "^0.12.2",
     "cordova-plugin-whitelist": "1",
     "font-awesome": "^4.7.0",
     "framework7": "^2.0.6",
@@ -57,7 +58,8 @@
   "displayName": "F7Demo",
   "cordova": {
     "plugins": {
-      "cordova-plugin-whitelist": {}
+      "cordova-plugin-whitelist": {},
+      "cordova-plugin-websocket": {}
     },
     "platforms": [
       "android"

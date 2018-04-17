@@ -9,6 +9,9 @@
   "installed_plugins": {
     "cordova-plugin-whitelist": {
       "PACKAGE_NAME": "com.example.f7demo"
+    },
+    "cordova-plugin-websocket": {
+      "PACKAGE_NAME": "com.example.f7demo"
     }
   },
   "dependent_plugins": {}
