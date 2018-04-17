@@ -14,9 +14,12 @@
         <f7-block inner>
             <p>This is template for Framework7 v2, Vue and Phonegap.</p>
             <p>userAgent: {{ userAgent }}</p>
+            <p>appName: {{ appName }}</p>
+            <p>appVersion: {{ appVersion }}</p>
             <p>Support WebSocket: {{ webSocketEnabled }}</p>
             <p>Support Audio: {{ audioEnabled }}</p>
             <p>Support Canvas: {{ canvasEnabled }}</p>
+            <p>Support Geolocation: {{ geolocationEnabled }}</p>
         </f7-block>
         <f7-block-title class="searchbar-found">Links</f7-block-title>
         <f7-list class="components-list searchbar-found">
@@ -53,16 +56,22 @@ export default {
     data() {
         return {
             userAgent: '',
+            appName: '',
+            appVersion: '',
             webSocketEnabled: false,
             audioEnabled: false,
-            canvasEnabled: false
+            canvasEnabled: false,
+            geolocationEnabled: false
         }
     },
     mounted() {
         this.userAgent = navigator.userAgent
+        this.appName = navigator.appName
+        this.appVersion = navigator.appVersion
         this.webSocketEnabled = typeof WebSocket !== 'undefined'
         this.audioEnabled = typeof document.createElement('audio').play === 'function'
         this.canvasEnabled = typeof document.createElement('canvas').getContext === 'function'
+        this.geolocationEnabled = typeof navigator.geolocation !== 'undefined'
     }
 }
 </script>
