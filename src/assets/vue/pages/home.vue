@@ -13,6 +13,10 @@
         <f7-block-title>Introduction</f7-block-title>
         <f7-block inner>
             <p>This is template for Framework7 v2, Vue and Phonegap.</p>
+            <p>userAgent: {{ userAgent }}</p>
+            <p>Support WebSocket: {{ webSocketEnabled }}</p>
+            <p>Support Audio: {{ audioEnabled }}</p>
+            <p>Support Canvas: {{ canvasEnabled }}</p>
         </f7-block>
         <f7-block-title class="searchbar-found">Links</f7-block-title>
         <f7-list class="components-list searchbar-found">
@@ -45,6 +49,20 @@
     </f7-page>
 </template>
 <script>
-export default {};
-
+export default {
+    data() {
+        return {
+            userAgent: '',
+            webSocketEnabled: false,
+            audioEnabled: false,
+            canvasEnabled: false
+        }
+    },
+    mounted() {
+        this.userAgent = navigator.userAgent
+        this.webSocketEnabled = typeof WebSocket !== 'undefined'
+        this.audioEnabled = typeof document.createElement('audio').play === 'function'
+        this.canvasEnabled = typeof document.createElement('canvas').getContext === 'function'
+    }
+}
 </script>
