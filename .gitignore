@@ -59,6 +59,6 @@ typings/
 
 www/
 jsconfig.json
-platforms/android/.gradle
-platforms/android/app/build
-platforms/android/build
+platforms/android/.gradle/
+platforms/android/app/build/
+platforms/android/build/
