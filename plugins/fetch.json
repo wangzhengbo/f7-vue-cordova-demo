@@ -10,7 +10,7 @@
   "cordova-plugin-websocket": {
     "source": {
       "type": "registry",
-      "id": "cordova-plugin-websocket"
+      "id": "cordova-plugin-websocket@^0.12.2"
     },
     "is_top_level": true,
     "variables": {}

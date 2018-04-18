@@ -68,7 +68,7 @@ export default {
     },
     mounted() {
         document.addEventListener('deviceready', () => {
-            this.deviceready += ', deviceready2'
+            this.deviceready += ', deviceready'
         }, false);
 
         this.userAgent = navigator.userAgent
@@ -82,7 +82,7 @@ export default {
     methods: {
         onF7Ready() {
             this.webSocketEnabled = typeof WebSocket !== 'undefined'
-            this.deviceready += ', deviceready'
+            this.deviceready += ', onF7Ready'
         }
     }
 }

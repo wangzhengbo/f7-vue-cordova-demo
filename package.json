@@ -43,6 +43,7 @@
     "babel-loader": "^7.1.2",
     "babel-polyfill": "^6.26.0",
     "babel-preset-env": "^1.6.1",
+    "cordova-android": "^7.0.0",
     "cordova-browser": "^5.0.3",
     "cordova-plugin-websocket": "^0.12.2",
     "cordova-plugin-whitelist": "1",
@@ -61,7 +62,8 @@
       "cordova-plugin-websocket": {}
     },
     "platforms": [
-      "browser"
+      "browser",
+      "android"
     ]
   }
 }
