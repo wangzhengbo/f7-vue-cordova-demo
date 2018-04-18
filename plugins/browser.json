@@ -7,10 +7,10 @@
     "files": {}
   },
   "installed_plugins": {
-    "cordova-plugin-whitelist": {
+    "cordova-plugin-websocket": {
       "PACKAGE_NAME": "com.example.f7demo"
     },
-    "cordova-plugin-websocket": {
+    "cordova-plugin-whitelist": {
       "PACKAGE_NAME": "com.example.f7demo"
     }
   },

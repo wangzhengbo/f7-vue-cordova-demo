@@ -13,7 +13,7 @@
         <f7-block-title>Introduction</f7-block-title>
         <f7-block inner>
             <p>This is template for Framework7 v2, Vue and Phonegap.</p>
-            <p>deviceready: {{ deviceready }}</p>
+            <p>#deviceready: {{ deviceready }}</p>
             <p>userAgent: {{ userAgent }}</p>
             <p>appName: {{ appName }}</p>
             <p>appVersion: {{ appVersion }}</p>
@@ -67,6 +67,10 @@ export default {
         }
     },
     mounted() {
+        document.addEventListener('deviceready', () => {
+            this.deviceready += ', deviceready2'
+        }, false);
+
         this.userAgent = navigator.userAgent
         this.appName = navigator.appName
         this.appVersion = navigator.appVersion
@@ -78,7 +82,7 @@ export default {
     methods: {
         onF7Ready() {
             this.webSocketEnabled = typeof WebSocket !== 'undefined'
-            this.deviceready = 'deviceready'
+            this.deviceready += ', deviceready'
         }
     }
 }

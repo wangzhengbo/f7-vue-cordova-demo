@@ -29,6 +29,6 @@
         <allow-intent href="itms-apps:*" />
     </platform>
     <allow-navigation href="*" />
+    <engine name="browser" spec="~5.0.3" />
     <plugin name="cordova-plugin-websocket" spec="^0.12.2" />
-    <engine name="android" spec="^7.0.0" />
 </widget>
